@@ -1,0 +1,124 @@
+ /* main to do list containers css */
+
+.todoListMain {
+}
+
+.todoListMain > .header {
+	display: flex;
+    flex-direction: column;
+}
+
+.todoList {
+  margin-top: 40px;
+  padding: 0;
+}
+
+ /* end main to do list containers css */
+
+
+ /* add to do css */
+
+.add-todo, .add-todo::after, .add-todo::before {
+	background: #4568DC;
+	background: -webkit-linear-gradient(to right, #B06AB3, #4568DC);  
+	background: linear-gradient(to right, #B06AB3, #4568DC); 
+	border-radius: 10px;
+    padding: 30px;
+    position: relative;
+    width: 40vw;
+}
+
+.add-todo {
+	margin: auto;
+}
+
+.add-todo::after, .add-todo::before {
+	content: ' ';
+	position: absolute;
+	bottom: -10px;
+    opacity: 0.3;
+    margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	width: 30vw;
+	z-index: -1;
+}
+
+.add-todo::before {
+	bottom: -18px;
+	opacity: 0.1;
+	width: 25vw;
+}
+
+.add-todo input, .add-todo button {
+	border-radius: 10px;
+    padding: 16px;
+    font-size: 20px;
+    border: solid 1px #eee;
+    margin-right: 30px;
+}
+
+.add-todo button  {
+    border-radius: 50%;
+    padding: 16px 20px;
+    background-color: transparent;
+    border: solid 3px #fff;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.add-todo button i {
+	color: #fff;
+	transform: rotate(0deg);
+	transition: all 0.2s ease-in-out;
+}
+
+.add-todo button:hover i {
+	transform: rotate(90deg);
+	
+}
+
+.add-todo button:hover {
+	opacity: 0.8;
+}
+
+.add-todo input:focus, .add-todo button:focus {
+	outline:none;
+}
+
+ /* end add to do css */
+
+ /* card css */
+.card {
+	position: relative;
+    margin: auto;
+    overflow: hidden;
+    width: 520px;
+    min-height: 50px;
+    background: #F5F5F5;
+    box-shadow: 5px 5px 15px rgba(186, 126, 126, 0.5);
+    border-radius: 10px;
+    margin: 15px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(-100px);
+    opacity: 0;
+    -webkit-animation: slide 0.5s forwards;
+    -webkit-animation-delay: 2s;
+    animation: slide 0.5s forwards;
+    animation-delay: 2s;
+    padding: 0 20px;
+
+}
+
+@-webkit-keyframes slide {
+    100% { transform: translateX(0px); opacity: 1; }
+}
+
+@keyframes slide {
+    100% { transform: translateX(0px); opacity: 1; }
+}
+
+ /* end card css */

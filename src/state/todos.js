@@ -1,3 +1,8 @@
+
+const initState = {
+    list: []
+};
+
 export function loadTodos() {
   return dispatch => {
     // for the sake of this exercise data is being returned directly - real implementation would use API
@@ -14,17 +19,22 @@ export function loadTodos() {
 export function addTodo() {
   // imagine that adding a todo is also an async operation
   setTimeout(() => {
+    console.log()
     // TODO
   }, 2000);
 }
 
-export function todos(state, action) {
+export function todos(state = initState, action) {
   switch (action.type) {
     case "ADD_TODO":
       // TODO
       return state;
     case "LIST_TODOS":
-      state.list = action.payload;
+      // we should not manipulate the state directly
+      //state.list = action.payload;
+      return Object.assign({}, state, {
+        list: state.list.concat(action.payload)
+      });
       return state;
     default:
       return state;
