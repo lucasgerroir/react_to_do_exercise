@@ -42,8 +42,11 @@ Completed see code
 - [ ] Are there are bad coding practices being used, are there good coding practices that are missing?
 
 Define reducers actions as constants to avoid string typos. 
+
 Do not directly manipulate the state. 
+
 Comments throughout code explaining what each function does. 
+
 Using “bindActionCreators” is not encouraged.
 
 In the JSX of the “TodoList” component, it was using a class instead of className. class is a reserved HTML attribute, so we have to use JSX’s syntax of className.
@@ -57,7 +60,7 @@ I’ve reorganized the project into a better directory structure. I’ve include
 
 I’ve broken the redux content in the state folder into reducers and actions. With Vuex they include these folders into a parent folder called the store. That way you have components and store distinctively separated. For this example, I thought it would be overkill. 
 
-I’ve added the reducers under a reducers folder. Within that folder, there is an index, js and a todo.js. In the index we can combine all our reducers. We keep them in separate files based on routes or API calls. Now they are easier to reference. 
+I’ve added the reducers under a reducers folder. Within that folder, there is an index.js and a todo.js. In the index we can combine all our reducers. We keep them in separate files based on routes or API calls. Now they are easier to reference. 
 I’ve added the actions to an actions folder. Within the action folder, I’ve thrown the load to-dos and add to-dos action calls. 
 
 We could include a store folder and file in which we handle the create store and middleware setup. This way you can include the store into components and access it directly. For this example, it was again overkill.
@@ -65,12 +68,14 @@ We could include a store folder and file in which we handle the create store and
 The last suggestion I will make is storing all our action variables in a constants js file. In this file, we define our actions as constants and include the constants file in the action files. That way we avoid typos which we all do!
 
 I would separate the to-do into a to-do component. Right now, the to-do is basically just a list item with text but this could become more complicated. 
-I would also separate out the add to-do section from the to-do list. The add to would probably be used in multiple areas of the app so it should be separated out for reusability. 
+
+I would also separate out the add to-do section from the to-do list. The add to-do would probably be used in multiple areas of the app so it should be separated out for reusability. 
 
 
 - [ ] What is missing from this application to allow it to grow with more components and features?
 
 React Routing library and setup would be necessary if you wanted to add more pages, components or features. 
+
 Integrating gulp to handle compiling. With gulp, you can compile your CSS preprocessor, minify CSS and JavaScript and concatenate files to avoid caching issues.
 
 Adding a CSS preprocessor would be beneficial. LESS or Sass would be great options. For example, if you wanted to have the ability to change a theme leveraging LESS or sasses CSS variables would be beneficial. 
