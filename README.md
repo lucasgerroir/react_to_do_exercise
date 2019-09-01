@@ -26,8 +26,16 @@ The final file I dissected was the state/todo.js file. This file contains the re
 
 
 - [ ] Implement the missing Add Todo feature using the framework provided
+
+Completed see code
+
 - [ ] Add some descriptions of unit tests that need to be written
+
+Completed see code
+
 - [ ] Add some CSS to make your TODO list look a bit nicer
+
+Completed see code
 
 ## Questions
 
