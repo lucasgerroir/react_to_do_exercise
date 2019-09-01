@@ -2,7 +2,7 @@
 
 ## Goals
 
-- [ ] Why is the app not running?
+- [ ] **Why is the app not running?**
 
 The app is not running because we are receiving the following error in the console “TypeError: Cannot read property ‘list’ of undefined”.  This error is occurring because in the ToDoList.js file we are trying to access list attribute of the state object and the object state is not defined. 
 
@@ -10,7 +10,7 @@ The state object is being referred to when we are mapping the state to the props
 
 So the question is why was a state not defined. The answer was adding an “initState” to the todolist store. By doing this we are setting the initial state variables. 
 
-- [ ] Describe your understanding of what the current code base is doing
+- [ ] **Describe your understanding of what the current code base is doing**
 
 It all begins in the public index html file. This file becomes the single page of our single page application. In this file we add a div tag with the id of root. This root div becomes the container of our app. The index file begins by importing the necessary libraries to run a react app. This would include react and reactDOM. The app component is then binded to the root div we had created in the index.html file using reactDOM. 
 
@@ -25,21 +25,21 @@ The main ToDoList component currently has three jobs. Load the list of to-dos, d
 The final file I dissected was the state/todo.js file. This file contains the redux store actions and reducers. The actions dispatch to the reducers passing a payload. The reducers then store the payload. This file is being referenced when creating our store and mapping to the “todolist “component. 
 
 
-- [ ] Implement the missing Add Todo feature using the framework provided
+- [ ] **Implement the missing Add Todo feature using the framework provided**
 
 Completed see code
 
-- [ ] Add some descriptions of unit tests that need to be written
+- [ ] **Add some descriptions of unit tests that need to be written**
 
 Completed see code
 
-- [ ] Add some CSS to make your TODO list look a bit nicer
+- [ ] **Add some CSS to make your TODO list look a bit nicer**
 
 Completed see code
 
 ## Questions
 
-- [ ] Are there are bad coding practices being used, are there good coding practices that are missing?
+- [ ] **Are there are bad coding practices being used, are there good coding practices that are missing?**
 
 Define reducers actions as constants to avoid string typos. 
 
@@ -54,7 +54,7 @@ In the JSX of the “TodoList” component, it was using a class instead of clas
 In the ToDoList component, we are mapping through the to-dos result array. In this array, we were not setting a key for the iterator. I added a key which is good practice.
 
 
-- [ ] How would you better organize this code? Are there components that should be split out?
+- [ ] **How would you better organize this code? Are there components that should be split out?**
 
 I’ve reorganized the project into a better directory structure. I’ve included all the components such as “App” and “toDoList” in the components folder. As well in this folder, I include the CSS and test files for each component.
 
@@ -72,7 +72,7 @@ I would separate the to-do into a to-do component. Right now, the to-do is basic
 I would also separate out the add to-do section from the to-do list. The add to-do would probably be used in multiple areas of the app so it should be separated out for reusability. 
 
 
-- [ ] What is missing from this application to allow it to grow with more components and features?
+- [ ] **What is missing from this application to allow it to grow with more components and features?**
 
 React Routing library and setup would be necessary if you wanted to add more pages, components or features. 
 
