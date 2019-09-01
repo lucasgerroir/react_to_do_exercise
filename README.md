@@ -33,8 +33,13 @@ The final file I dissected was the state/todo.js file. This file contains the re
 
 - [ ] Are there are bad coding practices being used, are there good coding practices that are missing?
 
-Define reducers actions as constants to avoid string typos. Do not directly manipulate the state. Comments throughout code explaining what each function does. Using “bindActionCreators” is not encouraged.
+Define reducers actions as constants to avoid string typos. 
+Do not directly manipulate the state. 
+Comments throughout code explaining what each function does. 
+Using “bindActionCreators” is not encouraged.
+
 In the JSX of the “TodoList” component, it was using a class instead of className. class is a reserved HTML attribute, so we have to use JSX’s syntax of className.
+
 In the ToDoList component, we are mapping through the to-dos result array. In this array, we were not setting a key for the iterator. I added a key which is good practice.
 
 
