@@ -16,7 +16,6 @@ export function addTodo(payload) {
    return dispatch => {
     // imagine that adding a todo is also an async operation
     setTimeout(() => {
-        console.log("add");
         dispatch({
           type: "ADD_TODO",
           payload: payload
