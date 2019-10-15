@@ -1,4 +1,4 @@
-# Seequent React Coding Test
+# React Coding Test
 
 ## Goals
 
